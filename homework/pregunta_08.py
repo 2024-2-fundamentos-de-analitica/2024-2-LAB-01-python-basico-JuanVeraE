@@ -27,7 +27,7 @@ def pregunta_08():
      (9, ['A', 'B', 'C', 'E'])]
 
     """
-    data = open("files\input\data.csv", "r").readlines()
+    data = open("files/input/data.csv", "r").readlines()
     letras = {}
     for i in data:
         temp = i.split(",")[0]

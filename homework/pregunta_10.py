@@ -20,7 +20,7 @@ def pregunta_10():
 
 
     """
-    data = open("files\input\data.csv", "r").readlines()
+    data = open("files/input/data.csv", "r").readlines()
     letras = []
     for i in data:
         temp = i.split("\t")

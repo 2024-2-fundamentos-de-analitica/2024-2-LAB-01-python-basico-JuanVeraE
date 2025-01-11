@@ -14,7 +14,7 @@ def pregunta_01():
     214
 
     """
-    data = open("files\input\data.csv", "r").readlines()
+    data = open("files/input/data.csv", "r").readlines()
     suma = 0
     for i in data:
         temp = i.split(",")[0]

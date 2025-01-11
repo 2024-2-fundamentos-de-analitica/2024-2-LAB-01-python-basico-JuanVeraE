@@ -15,7 +15,7 @@ def pregunta_03():
     [('A', 53), ('B', 36), ('C', 27), ('D', 31), ('E', 67)]
 
     """
-    data = open("files\input\data.csv", "r").readlines()
+    data = open("files/input/data.csv", "r").readlines()
     letras = {}
 
     suma = 0

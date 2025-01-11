@@ -26,7 +26,7 @@ def pregunta_04():
      ('12', 3)]
 
     """
-    data = open("files\input\data.csv", "r").readlines()
+    data = open("files/input/data.csv", "r").readlines()
     meses = {}
     for i in data:
         temp = i.split(",")[0]

@@ -26,7 +26,7 @@ def pregunta_06():
      ('jjj', 5, 17)]
 
     """
-    data = open("files\input\data.csv", "r").readlines()
+    data = open("files/input/data.csv", "r").readlines()
     claves = {}
     for i in data:
         temp = i.split("\t")
