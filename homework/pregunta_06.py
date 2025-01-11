@@ -26,3 +26,24 @@ def pregunta_06():
      ('jjj', 5, 17)]
 
     """
+    data = open("files\input\data.csv", "r").readlines()
+    claves = {}
+    for i in data:
+        temp = i.split("\t")
+        clave = temp[-1]
+        clave = clave.split(",")
+        for i in clave:
+            clave = i.strip()
+            clave_temp = clave.split(":")     
+            clave = clave_temp[0]
+            valor = int(clave_temp[1])
+
+            if clave in claves:
+                if valor > claves[clave][0]:
+                    claves[clave] = (valor, claves[clave][1])
+                if valor < claves[clave][1]:
+                    claves[clave] = (claves[clave][0], valor)
+            else:
+                claves[clave] = (valor, valor)
+    return sorted([(k, v[1], v[0]) for k, v in claves.items()])
+print(pregunta_06())

@@ -24,3 +24,19 @@ def pregunta_09():
      'jjj': 18}}
 
     """
+    data = open("files\input\data.csv", "r").readlines()
+    claves = {}
+    for i in data:
+        temp = i.split("\t")
+        clave = temp[-1]
+        clave = clave.split(",")
+        for i in clave:
+            clave = i.strip()
+            clave_temp = clave.split(":")     
+            clave = clave_temp[0]
+            if clave in claves:
+                claves[clave] += 1
+            else:
+                claves[clave] = 1
+    return claves
+print(pregunta_09())

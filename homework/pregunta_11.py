@@ -16,3 +16,17 @@ def pregunta_11():
 
 
     """
+    data = open("files\input\data.csv", "r").readlines()
+    letras = {}
+    for i in data:
+        temp = i.split("\t")
+        temp_letras = temp[3].split(",")
+        for letra in temp_letras:
+            letra = letra.strip()
+            numero = int(temp[1])
+            if letra in letras:
+                letras[letra] += numero
+            else:
+                letras[letra] = numero
+    return {k: v for k, v in sorted(letras.items())}
+print(pregunta_11())

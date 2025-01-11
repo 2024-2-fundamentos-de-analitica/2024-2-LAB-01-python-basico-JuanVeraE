@@ -15,3 +15,21 @@ def pregunta_03():
     [('A', 53), ('B', 36), ('C', 27), ('D', 31), ('E', 67)]
 
     """
+    data = open("files\input\data.csv", "r").readlines()
+    letras = {}
+
+    suma = 0
+
+    for i in data:
+        temp = i.split(",")[0]
+        letra = temp[0]
+        temp_num = i.split(",")[0]
+        numero = temp_num.split("\t") 
+        numero = int(numero[1])
+
+        if letra in letras:
+            letras[letra] += numero
+        else:
+            letras[letra] = numero
+    return sorted([(k, v) for k, v in letras.items()])
+print(pregunta_03())

@@ -20,3 +20,13 @@ def pregunta_10():
 
 
     """
+    data = open("files\input\data.csv", "r").readlines()
+    letras = []
+    for i in data:
+        temp = i.split("\t")
+        letra = temp[0]
+        num_1 = temp[3].split(",")
+        num_2 = temp[4].split(",")
+        letras.append((letra, len(num_1), len(num_2)))
+    return letras
+print(pregunta_10())
